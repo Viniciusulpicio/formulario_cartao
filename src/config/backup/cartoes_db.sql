@@ -1,0 +1,10 @@
+CREATE DATABASE cartoes_db;
+USE cartoes_db;
+
+CREATE TABLE cartao (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  numero VARCHAR(19) NOT NULL UNIQUE,
+  validade VARCHAR(5) NOT NULL,
+  cvv VARCHAR(3) NOT NULL
+);

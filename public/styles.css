@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    right: 5vw;
+}
+
+.cartao {
+    width: 37%;
+    background: linear-gradient(to bottom right, #2c003e, #4b0082);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20vw;
+    color: white;
+    position: relative;
+    overflow: visible;
+}
+
+.frente, .verso {
+    background: black;
+    width: 32vw;
+    height: 36vh;
+    border-radius: 1vw;
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.frente {
+    top: 5%;
+    left: 30%;
+    z-index: 2;
+}
+
+.verso {
+    top: 50%;
+    left: 45%;
+    z-index: 1;
+}
+
+.banco { font-size: 2vw; }
+.numero { font-size: 2vw; letter-spacing: 0.1vw; }
+.nome { font-size: 2vw; }
+.chip { width: 4vw; height: 4.65vh; background: gray; border-radius: 0.4vw; }
+
+.faixa {
+    width: 100%;
+    height: 6.2vh;
+    background: gray;
+}
+
+.cvv {
+    background: white;
+    color: black;
+    padding: 0.8vw;
+    border-radius: 0.4vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.formulario {
+    margin-top: 3.5vh;
+    left: 45%;
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    align-items: flex-end;
+}
+
+
+.formulario h2 {
+    text-align: center;
+    font-size: 8vh;
+    line-height: 1.2;
+    display: block;
+    max-width: 100%;
+    white-space: normal; 
+    word-break: break-word; 
+    margin-bottom: 14vh;
+}
+
+
+.formulario span {
+    background: #d3d3d3;
+    padding: 0.3vh 1vw;
+    border-radius: 3px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input {
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 5vh;
+    border: none; 
+    background-color: rgb(217, 217, 217);
+}
+
+button {
+    background: #4b0082;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 0.7vw;
+    font-size: 1vw;
+    height: 6vh;
+    margin-top: 3vh;
+}
+
+.aviso {
+    margin-top: 1.3vh;
+    font-size: 1.1vh;
+    text-align: center;
+    color: rgb(194, 185, 185);
+}
+
+.linha{
+    display: flex;
+
+}
+
+.input-column{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+}
+
+
+@media (max-width: 1340px) {
+    .frente, .verso {
+        width: 35vw;
+        height: 33vh;
+    }
+
+    .formulario h2 {
+        font-size: 7vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .frente, .verso {
+        width: 33vw;
+        height: 27vh;
+    }
+
+    .formulario h2 {
+        font-size: 5vh;
+    }
+
+    .formulario {
+        margin-top: 0vh;
+        width: 55%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
+        align-items: flex-end;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 89%;
+    }
+
+    .banco { font-size: 3vw; }
+    .numero { font-size: 3vw; letter-spacing: 0.1vw; }
+    .nome { font-size: 2.5vw; }
+    .chip { width: 5vw; height: 3vh; background: gray; border-radius: 0.4vw; }
+
+    .cvv {
+        background: white;
+        color: black;
+        padding: 0.8vw;
+        border-radius: 0.4vw;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+}
+
+.titulo-celular{
+    display: none;
+
+}
+
+.formulario span {
+    background: #d3d3d3;
+    padding: 0.3vh 1vw;
+    border-radius: 3px;
+}
+
+
+@media (max-width: 885px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0; /* Remover qualquer margem extra */
+        padding: 0; /* Remover qualquer padding extra */
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Garante que a container ocupe a largura total */
+        box-sizing: border-box; /* Garante que padding e bordas não afetem a largura */
+    }
+
+    .formulario {
+        width: 90%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 1vw;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .formulario h2 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 2vh;
+        display: none;
+    }
+
+    .cartao {
+        width: 100%;
+        padding: 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background: none; */
+        flex-direction: row;
+        margin-top: 3vh;
+        box-sizing: border-box;
+    }
+
+    .frente, .verso {
+        width: 45%;
+        height: 22vh;
+        position: static;
+    }
+
+    input, button {
+        width: 100%;
+        font-size: 2.5vw;
+    }
+
+    .titulo-celular {
+        font-size: 6vw; 
+        width: 80%;      
+        display: flex; 
+        justify-content: center; 
+        margin-top: 3vh;
+    }
+    
+}
+
+
+@media (max-width: 425px) {
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0; 
+        padding: 0; 
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .formulario {
+        width: 90%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 1vw;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .formulario h2 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 2vh;
+        display: none;
+    }
+
+    .cartao {
+        width: 100%;
+        padding: 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3vh;
+        box-sizing: border-box;
+    }
+
+    .frente, .verso {
+        width: 45%;
+        height: 14vh;
+        position: static;
+        margin-bottom: 1vh;
+    }
+
+    input, button {
+        width: 100%;
+        font-size: 2.5vw;
+    }
+
+    .titulo-celular {
+        font-size: 6vw; 
+        width: 80%;      
+        display: flex; 
+        justify-content: center; 
+        margin-top: 13vh;
+    }
+
+    .linha {
+        display: flex
+    ;
+        flex-direction: column;
+    }
+
+    form {
+        display: flex
+;
+        flex-direction: column;
+        width: 89%;
+        margin-bottom: 1vh;
+    }
+
+}
+
+.modal {
+    display: none; /* Modal está oculto por padrão */
+    position: fixed;
+    z-index: 1; /* Fica sobreposto a outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
